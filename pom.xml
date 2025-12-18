@@ -86,33 +86,33 @@
     </plugins>
   </build>
   <profiles>
-  <profile>
-    <id>qulice</id>
-    <build>
-      <plugins>
-        <plugin>
-          <groupId>com.qulice</groupId>
-          <artifactId>qulice-maven-plugin</artifactId>
-          <version>0.24.3</version>
-          <configuration>
-            <excludes combine.children="append">
-              <exclude>checkstyle:/src/site/resources/.*</exclude>
-              <exclude>findbugs:.*</exclude>
-              <exclude>xml:.*</exclude>
-            </excludes>
-          </configuration>
-          <executions>
-            <execution>
-              <id>qulice-check</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </build>
-  </profile>
+    <profile>
+      <id>qulice</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.qulice</groupId>
+            <artifactId>qulice-maven-plugin</artifactId>
+            <version>0.24.3</version>
+            <configuration>
+              <excludes combine.children="append">
+                <exclude>checkstyle:/src/site/resources/.*</exclude>
+                <exclude>findbugs:.*</exclude>
+                <exclude>xml:.*</exclude>
+              </excludes>
+            </configuration>
+            <executions>
+              <execution>
+                <id>qulice-check</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>
