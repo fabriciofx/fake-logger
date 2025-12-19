@@ -13,8 +13,10 @@
   </parent>
   <groupId>com.github.fabriciofx</groupId>
   <artifactId>fake-logger</artifactId>
+  <packaging>jar</packaging>
+  <name>fake-logger</name>
   <version>0.0.1</version>
-  <description>A fake logger</description>
+  <description>A fake logger for tests</description>
   <url>https://github.com/fabriciofx/fake-logger</url>
   <inceptionYear>2025</inceptionYear>
   <organization>
