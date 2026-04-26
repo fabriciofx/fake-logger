@@ -11,12 +11,11 @@ import java.util.logging.LogRecord;
 
 /**
  * CustomFormatter.
- *
- * Custom format for log messages.
- *
+ * <p>Custom format for log messages.</p>
  * @since 0.0.1
  */
 public final class CustomFormatter extends Formatter {
+
     /**
      * Format.
      */
@@ -31,7 +30,7 @@ public final class CustomFormatter extends Formatter {
 
     /**
      * Ctor.
-     * @param fmt Message format.
+     * @param fmt Message format
      */
     public CustomFormatter(final String fmt) {
         super();
@@ -40,10 +39,6 @@ public final class CustomFormatter extends Formatter {
 
     @Override
     public String format(final LogRecord rcd) {
-        final ZonedDateTime zdt = ZonedDateTime.ofInstant(
-            rcd.getInstant(),
-            ZoneId.systemDefault()
-        );
         final String source;
         final String klass = rcd.getSourceClassName();
         final String method = rcd.getSourceMethodName();
@@ -58,7 +53,7 @@ public final class CustomFormatter extends Formatter {
         }
         return String.format(
             this.fmt,
-            zdt,
+            ZonedDateTime.ofInstant(rcd.getInstant(), ZoneId.systemDefault()),
             rcd.getLevel().getName(),
             source,
             rcd.getMessage()

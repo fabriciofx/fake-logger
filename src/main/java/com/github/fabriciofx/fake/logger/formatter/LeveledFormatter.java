@@ -9,12 +9,11 @@ import java.util.logging.LogRecord;
 
 /**
  * LeveledFormatter.
- *
- * Only level and message log format.
- *
+ * <p>Only level and message log format.</p>
  * @since 0.0.1
  */
 public final class LeveledFormatter extends Formatter {
+
     @Override
     public String format(final LogRecord rcd) {
         return String.format(

@@ -10,13 +10,12 @@ import java.util.logging.Logger;
 
 /**
  * FakeLogger.
- *
  * <p>There is no thread-safety guarantee.
- *
  * @since 0.0.1
  */
 @SuppressWarnings("PMD.ConstructorOnlyInitializesOrCallOtherConstructors")
 public final class FakeLogger extends Logger {
+
     /**
      * Ctor.
      */
@@ -46,6 +45,7 @@ public final class FakeLogger extends Logger {
      * @param name Logger name
      * @param handler Logger handler
      * @param lvl Logging level
+     * @checkstyle ConstructorsCodeFreeCheck (15 lines)
      */
     public FakeLogger(
         final String name,

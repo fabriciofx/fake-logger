@@ -9,12 +9,11 @@ import java.util.logging.LogRecord;
 
 /**
  * NoFormatter.
- *
- * No format for log messages.
- *
+ * <p>No format for log messages.</p>
  * @since 0.0.1
  */
 public final class NoFormatter extends Formatter {
+
     @Override
     public String format(final LogRecord rcd) {
         return String.format("%1$s%n", rcd.getMessage());

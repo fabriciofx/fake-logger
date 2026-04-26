@@ -15,12 +15,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * FakeLogger tests.
- *
  * @since 0.0.1
  */
 final class FakeLoggerTest {
+
     @Test
-    void testLogNoFormattedMessages() {
+    void logsNoFormattedMessages() {
         final Logger logger = new FakeLogger(
             new FakeHandler(
                 new NoFormatter()
@@ -40,7 +40,7 @@ final class FakeLoggerTest {
     }
 
     @Test
-    void testLogLeveledMessages() {
+    void logsLeveledMessages() {
         final Logger logger = new FakeLogger(
             new FakeHandler(
                 new LeveledFormatter()
@@ -60,7 +60,7 @@ final class FakeLoggerTest {
     }
 
     @Test
-    void testLogCustomMessages() {
+    void logsCustomMessages() {
         final Logger logger = new FakeLogger(
             new FakeHandler(
                 new CustomFormatter()

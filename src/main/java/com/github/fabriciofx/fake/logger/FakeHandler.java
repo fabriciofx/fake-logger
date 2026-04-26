@@ -14,13 +14,12 @@ import java.util.stream.Collectors;
 
 /**
  * FakeHandler logger.
- *
  * <p>There is no thread-safety guarantee.
- *
  * @since 0.0.1
  */
 @SuppressWarnings("PMD.ConstructorOnlyInitializesOrCallOtherConstructors")
 public final class FakeHandler extends Handler {
+
     /**
      * Records.
      */
@@ -36,6 +35,7 @@ public final class FakeHandler extends Handler {
     /**
      * Ctor.
      * @param formatter Formatter for log messages
+     * @checkstyle ConstructorsCodeFreeCheck (5 lines)
      */
     public FakeHandler(final Formatter formatter) {
         this.setFormatter(formatter);
@@ -59,8 +59,7 @@ public final class FakeHandler extends Handler {
 
     @Override
     public String toString() {
-        final Formatter formatter = this.getFormatter();
-        return this.records.stream().map(formatter::format)
+        return this.records.stream().map(this.getFormatter()::format)
             .collect(Collectors.joining());
     }
 }
